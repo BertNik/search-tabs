@@ -7,11 +7,15 @@
       "default_popup": "popup.html",
       "default_title": "Search Tabs"
    },
+   "content_scripts": [{
+    "matches": ["*://*/*"],
+    "js": ["scripts/content.js"]
+  }],
    "description": "Select tab by search",
    
    "incognito": "spanning",
    "manifest_version": 2,
    "name": "Search Tabs",
-   "permissions": [ "contextMenus", "storage", "webRequest", "webRequestBlocking", "\u003Call_urls>","activeTab" ],
+   "permissions": [ "contextMenus", "storage", "webRequest", "webRequestBlocking", "\u003Call_urls>","activeTab", "tabs" ],
    "version": "0.1"
 }

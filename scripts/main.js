@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   for(var s of search){
     s.addEventListener('keypress', function(e) {
       if(e.keyCode === 13){
-        bgPage.getAllTabs(e.target);
+        bgPage.getAllTabs(e.target,);
       }
     });
   }
