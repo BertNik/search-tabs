@@ -1,10 +1,6 @@
 const browser = chrome;
-let tabUrls = {};
 
 function getAllTabs(text){
-
-  
-
   text.value = text.value.toLowerCase();
   console.log('getting all tabs');
   chrome.tabs.query({}, function(tabs){
@@ -32,5 +28,4 @@ function getAllTabs(text){
         }
       }
   });
-  return "<div>test</div>"
 }
