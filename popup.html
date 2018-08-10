@@ -4,7 +4,19 @@
   <script src="scripts/main.js"></script>
 </head>
 <body>
-  Search Tabs Title<input id="title" class="search"/>
-  Search Tabs URL<input id="url" class="search"/>
-  
+  <table>
+    <tr>
+      <td>Get Tab by Tag<input id="get-tag" class="search"/></td>
+      <td>Tag Current Tab<input id="tag" class="search"/></td>
+    </tr>
+    <tr>
+      <td>Search Tabs Title<input id="title" class="search"/></td>
+      <td>Search Tabs URL<input id="url" class="search"/></td>
+    </tr>
+    <tr>
+      <td><button id="clear-tags" class="button">Clear Tags</button></td>
+      <td><button id="list-tags" class="button">List Tags</button></td>
+    </tr>
+  </table>
+  <div id="list-tags-placeholder"></div>
 </body>

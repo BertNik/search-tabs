@@ -6,10 +6,19 @@ document.addEventListener('DOMContentLoaded', function() {
   for(var s of search){
     s.addEventListener('keypress', function(e) {
       if(e.keyCode === 13){
-        bgPage.getAllTabs(e.target,);
+        bgPage.getAllTabs(e.target);
       }
     });
   }
+  var button = document.getElementById('clear-tags');
+  button.addEventListener('click', function(e) {
+    bgPage.getAllTabs(e.target);
+    
+  });
+  var button2 = document.getElementById('list-tags');
+  button2.addEventListener('click', function(e) {
+    document.getElementById('list-tags-placeholder').innerHTML = bgPage.getStorage();    
+  });
   respondToVisibility = function(element, callback) {
     var options = {
       root: document.documentElement
@@ -28,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const feedbackEl = document.getElementById("visibilityFeedback");
     if(visible) {
       console.log('visible');
-      document.getElementById('title').focus();
+      document.getElementById('get-tag').focus();
      }
      else {
        console.log('invisible');

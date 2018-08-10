@@ -10,6 +10,8 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
     function(request, sender, sendResponse) {
       if(request.action == "alterDom"){
         //document.body.innerHTML = request.data;
+      }else if(request.action == 'showTagList'){
+        console.log(request);
       }
         
     });
