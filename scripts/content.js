@@ -1,19 +1,18 @@
-chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
-    if (request.action == "getDOM")
-      console.log(sendResponse({dom: document.body.innerHTML}));
-    
-    else
-      sendResponse({}); 
-   });
+chrome.extension.onRequest.addListener(function (request, sender, sendResponse) {
+    if (request.action == "getDOM") {
+        console.log(sendResponse({ dom: document.body.innerHTML }));
+    } else {
+        sendResponse({});
+    }
+});
 
-   chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-      if(request.action == "alterDom"){
-        //document.body.innerHTML = request.data;
-      }else if(request.action == 'showTagList'){
-        console.log(request);
-      }
-        
+chrome.runtime.onMessage.addListener(
+    function (request, sender, sendResponse) {
+        if (request.action == "alterDom") {
+
+        } else if (request.action == 'showTagList') {
+            
+        }
+
     });
 
-   

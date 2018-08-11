@@ -1,12 +1,13 @@
 <!doctype html>
 <head>
-  
   <script src="scripts/main.js"></script>
+  <link rel="stylesheet/less" type="text/css" href="styles/style.less"/>
+  <script src="scripts/less.min.js" ></script>
 </head>
 <body>
   <table>
     <tr>
-      <td>Get Tab by Tag<input id="get-tag" class="search"/></td>
+      <td>Get Tab by Tag<input id="get-tag" class="search" list="auto-fill"/></td>
       <td>Tag Current Tab<input id="tag" class="search"/></td>
     </tr>
     <tr>
@@ -15,8 +16,13 @@
     </tr>
     <tr>
       <td><button id="clear-tags" class="button">Clear Tags</button></td>
-      <td><button id="list-tags" class="button">List Tags</button></td>
+      <td ><button id="list-tags" class="button hide">List Tags</button></td>
     </tr>
   </table>
-  <div id="list-tags-placeholder"></div>
+  <div id="list-tags-placeholder" data="">
+    
+  </div>
+  <datalist id="auto-fill" type="visible">
+
+  </datalist>
 </body>
